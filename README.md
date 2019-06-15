@@ -1,4 +1,4 @@
-# Luke's build of st - the simple (suckless) terminal
+# Toms's build of st - the simple (suckless) terminal
 
 The [suckless terminal (st)](https://st.suckless.org/) with some additional features that make it literally the best terminal emulator ever:
 
@@ -32,7 +32,7 @@ The [suckless terminal (st)](https://st.suckless.org/) with some additional feat
 ## Installation for newbs
 
 ```
-git clone https://github.com/LukeSmithxyz/st
+git clone https://github.com/F0xedb/sucklessterminal
 cd st
 sudo make install
 ```
@@ -72,5 +72,5 @@ Note that when you run `wal`, it will negate the transparency of existing window
 
 ## Contact
 
-- Luke Smith <luke@lukesmith.xyz>
-- [https://lukesmith.xyz](https://lukesmith.xyz)
+- Tom <tom@pbfp.team>
+- [https://pbfp.team](https://pbfp.team)
