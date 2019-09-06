@@ -442,13 +442,15 @@ bpress(XEvent *e)
 		return;
 	}
 
-	for (ms = mshortcuts; ms < mshortcuts + LEN(mshortcuts); ms++) {
-		if (e->xbutton.button == ms->b
+    if (tisaltscr()){
+	    for (ms = mshortcuts; ms < mshortcuts + LEN(mshortcuts); ms++) {
+		    if (e->xbutton.button == ms->b
 				&& match(ms->mask, e->xbutton.state)) {
-			ttywrite(ms->s, strlen(ms->s), 1);
-			return;
-		}
-	}
+			    ttywrite(ms->s, strlen(ms->s), 1);
+			    return;
+		    }
+	    }
+    }
 
 	for (mk = mkeys; mk < mkeys + LEN(mkeys); mk++) {
 		if (e->xbutton.button == mk->b
