@@ -1,76 +1,163 @@
-# Toms's build of st - the simple (suckless) terminal
 
-The [suckless terminal (st)](https://st.suckless.org/) with some additional features that make it literally the best terminal emulator ever:
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![GPL License][license-shield]][license-url]
 
-## Unique features (using dmenu)
 
-+ **follow urls** by pressing `alt-l`
-+ **copy urls** in the same way with `alt-y`
-+ **copy the output of commands** with `alt-o`
 
-## Bindings for
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/ODEX-TOS/sucklessterminal">
+    <img src="https://tos.pbfp.xyz/images/logo.svg" alt="Logo" width="150" height="200">
+  </a>
 
-+ **scrollback** with `alt-↑/↓` or `alt-pageup/down` or `shift` while scrolling the mouse
-+ OR **vim-bindings**: scroll up/down in history with `alt-k` and `alt-j`. Faster with `alt-u`/`alt-d`.
-+ **zoom/change font size**: same bindings as above, but holding down shift as well. `alt-home` returns to default
-+ **copy text** with `alt-c`, **paste** is `alt-v` or `shift-insert`
+  <h3 align="center">suckless terminal</h3>
 
-## Pretty stuff
+  <p align="center">
+    A lightweight but fast terminal
+    <br />
+    <a href="https://github.com/ODEX-TOS/sucklessterminal"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/ODEX-TOS/sucklessterminal">View Demo</a>
+    ·
+    <a href="https://github.com/ODEX-TOS/sucklessterminal/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/ODEX-TOS/sucklessterminal/issues">Request Feature</a>
+  </p>
+</p>
 
-+ Compatibility with `Xresources` and `pywal` for dynamic colors. The `Xdefaults` file shows a usage example.
-+ Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
-+ Transparency/alpha, which is also adjustable from your `Xresources`.
-+ Default font is system "mono" at 16pt, meaning the font will match your system font.
 
-## Other st patches
 
-+ Vertcenter
-+ Scrollback
-+ font2
-+ updated to latest version 0.8.2
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
 
-## Installation for newbs
+* [About the Project](#about-the-project)
+  * [Built With](#built-with)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+This is a fork from the suckless terminal with nicer and easier to use features
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+All you need is make and all its dependencies, fontconfig is also required.
+libX11 ad libXft as xorg dependencies
+
+### Installation
+ 
+1. Clone the sucklessterminal
+```sh
+git clone https:://github.com/ODEX-TOS/sucklessterminal.git
+cd sucklessterminal
 ```
-git clone https://github.com/F0xedb/sucklessterminal
-cd st
+2. Build the source
+```sh
+make
+```
+3. install it on your system
+```sh
 sudo make install
 ```
-
-Users of Arch-based distros can also install it from the AUR as [st-luke-git](https://aur.archlinux.org/packages/st-luke-git/).
-
-Obviously, `make` is required to build. `fontconfig` is required for the default build, since it asks `fontconfig` for your system monospace font.  It might be obvious, but `libX11` and `libXft` are required as well. Chances are, you have all of this installed already.
-
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the `$LIBS` before compiling.
-
-Be sure to have a composite manager (`xcompmgr`, `compton`, etc.) running if you want transparency.
-
-## How to configure dynamically with Xresources
-
-For many key variables, this build of `st` will look for X settings set in either `~/.Xdefaults` or `~/.Xresources`. You must run `xrdb` on one of these files to load the settings.
-
-For example, you can define your desired fonts, transparency or colors:
-
-```
-*.font:	Liberation Mono:pixelsize=12:antialias=true:autohint=true;
-*.alpha: 0.9
-*.color0: #111
-...
+4. Launch it
+```sh
+st
 ```
 
-The `alpha` value (for transparency) goes from `0` (transparent) to `1` (opaque).
 
-### Colors
 
-To be clear about the color settings:
+<!-- USAGE EXAMPLES -->
+## Usage
 
-- This build will use gruvbox colors by default and as a fallback.
-- If there are Xresources colors defined, those will take priority.
-- But if `wal` has run in your session, its colors will take priority.
+Use this terminal like any other terminal. Here is a short list of useful features
 
-Note that when you run `wal`, it will negate the transparency of existing windows, but new windows will continue with the previously defined transparency.
+* `alt-l` open url
+* `alt-y` copy url
+* `alt-o` save last command
 
+* `alt+c` copy
+* `alt+v` past
+
+
+This terminal also works with xresources, pywal and more
+
+
+_For more examples, please refer to the [Documentation](https://tos.pbfp.xyz/blog)_
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+See the [open issues](https://github.com/ODEX-TOS/sucklessterminal/issues) for a list of proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the GPL License. See `LICENSE` for more information.
+
+
+
+<!-- CONTACT -->
 ## Contact
 
-- Tom <tom@pbfp.team>
-- [https://pbfp.team](https://pbfp.team)
+F0xedb - tom@odex.be
+
+Project Link: [https://github.com/ODEX-TOS/sucklessterminal](https://github.com/ODEX-TOS/sucklessterminal)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+
+* [ODEX-TOS](https://github.com/ODEX-TOS/sucklessterminal)
+
+
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/ODEX-TOS/sucklessterminal.svg?style=flat-square
+[contributors-url]: https://github.com/ODEX-TOS/sucklessterminal/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ODEX-TOS/sucklessterminal.svg?style=flat-square
+[forks-url]: https://github.com/ODEX-TOS/sucklessterminal/network/members
+[stars-shield]: https://img.shields.io/github/stars/ODEX-TOS/sucklessterminal.svg?style=flat-square
+[stars-url]: https://github.com/ODEX-TOS/sucklessterminal/stargazers
+[issues-shield]: https://img.shields.io/github/issues/ODEX-TOS/sucklessterminal.svg?style=flat-square
+[issues-url]: https://github.com/ODEX-TOS/sucklessterminal/issues
+[license-shield]: https://img.shields.io/github/license/ODEX-TOS/sucklessterminal.svg?style=flat-square
+[license-url]: https://github.com/ODEX-TOS/sucklessterminal/blob/master/LICENSE.txt
+[product-screenshot]: https://tos.pbfp.xyz/images/logo.svg
