@@ -11,7 +11,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/ODEX-TOS/sucklessterminal">
-    <img src="https://tos.pbfp.xyz/images/logo.svg" alt="Logo" width="150" height="200">
+    <img src="https://tos.odex.be/images/logo.svg" alt="Logo" width="150" height="200">
   </a>
 
   <h3 align="center">suckless terminal</h3>
@@ -99,7 +99,7 @@ Use this terminal like any other terminal. Here is a short list of useful featur
 This terminal also works with xresources, pywal and more
 
 
-_For more examples, please refer to the [Documentation](https://tos.pbfp.xyz/blog)_
+_For more examples, please refer to the [Documentation](https://tos.odex.be/blog)_
 
 
 
@@ -160,4 +160,4 @@ Project Link: [https://github.com/ODEX-TOS/sucklessterminal](https://github.com/
 [issues-url]: https://github.com/ODEX-TOS/sucklessterminal/issues
 [license-shield]: https://img.shields.io/github/license/ODEX-TOS/sucklessterminal.svg?style=flat-square
 [license-url]: https://github.com/ODEX-TOS/sucklessterminal/blob/master/LICENSE.txt
-[product-screenshot]: https://tos.pbfp.xyz/images/logo.svg
+[product-screenshot]: https://tos.odex.be/images/logo.svg
