@@ -15,7 +15,7 @@
  *  © 2013 Michael Forney <mforney at mforney dot org>
  *  © 2013-2014 Markus Teich <markus dot teich at stusta dot mhn dot de>
  *  © 2014-2015 Laslo Hunhold <dev at frign dot de>
- *  © 2019-2019 Tom Meyers <tom@odex.be>
+ *  © 2019-2020 Tom Meyers <tom at odex dot be>
  *  
  *  Permission is hereby granted, free of charge, to any person obtaining a
  *  copy of this software and associated documentation files (the "Software"),
