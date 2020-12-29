@@ -57,6 +57,9 @@ int allowwindowops = 0;
 static double minlatency = 8;
 static double maxlatency = 33;
 
+static uint su_timeout = 200;
+
+
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
