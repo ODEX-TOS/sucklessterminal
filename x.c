@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <locale.h>
 #include <signal.h>
+#include <stdlib.h>
 #include <sys/select.h>
 #include <time.h>
 #include <unistd.h>
@@ -1216,7 +1217,7 @@ xinit(int cols, int rows)
 		die("could not init fontconfig.\n");
 
 	usedfont = (opt_font == NULL)? font : opt_font;
-	xloadfonts(usedfont, 0, defaultfontsize);
+	xloadfonts(usedfont, defaultfontsize);
 
 	/* spare font (font2) */
 	xloadsparefont();
@@ -2154,8 +2155,14 @@ main(int argc, char *argv[])
 		opt_embed = EARGF(usage());
 		break;
 	case 'v':
-		die("%s " VERSION "\n", argv0);
+		die("%s " VERSION "\nMade by Tom Meyers (TOS/TDE)\n", argv0);
 		break;
+	case 'z':
+        defaultfontsize = strtod(EARGF(usage()), NULL);
+        if (!(defaultfontsize > 0))
+                usage();
+        break;
+
 	default:
 		usage();
 	} ARGEND;
